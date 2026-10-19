@@ -37,7 +37,8 @@ O projeto foi estruturado seguindo o padrão de modelagem **Star Schema** para o
 As métricas do projeto utilizam regras matemáticas avançadas em DAX com suporte a contextos de filtro dinâmicos:
 
 ### 1. Custo Operacional Total de Abastecimento (R$)
-$$\text{Custo EV} = (\text{Consumo Bruto} - \text{Energia Regenerada}) \times \text{Tarifa (R\$/kWh)}$$$$\text{Custo ICE} = \text{Consumo Bruto} \times \text{Preço Combustível (R\$/L)}$$
+* **Custo EV:** `(Consumo Bruto - Energia Regenerada) * Tarifa (R$/kWh)`
+* **Custo ICE:** `Consumo Bruto * Preço Combustível (R$/L)`
 ```dax
 Custo_Total_R$ = 
 SUMX(
